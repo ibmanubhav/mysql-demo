@@ -35,6 +35,7 @@ public class UserService implements IUserService{
 	
 	public void deleteUser(int userId) {
 		System.out.println("user deleted");
+		userRepository.deleteById(userId);
 	}
 
 }

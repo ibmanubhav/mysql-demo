@@ -1,6 +1,9 @@
 package com.example.mysqldemo.entity;
 
 import javax.persistence.Entity;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
@@ -9,7 +12,10 @@ public class User {
 	@Id
 	@GeneratedValue
 	private Integer id;
+	@NotNull
+	@NotBlank
 	private String name;
+	@Email(message="Valid Email")
 	private String email;
 	private long mobile;
 	
